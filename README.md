@@ -4,6 +4,8 @@ A browser-local converter from VLESS share links to Xray outbound JSON for XKeen
 
 **Website:** https://vless-to-xkeen.pages.dev
 
+**Source:** https://github.com/dimensi/vless-to-xkeen
+
 ## Features
 
 - Reads transport and security settings from the link.
@@ -38,6 +40,8 @@ The static build is written to `dist/`. No backend or runtime environment variab
 - Build command: `npm test && npm run build`.
 - Output directory: `dist`.
 - Native Git integration handles builds and deployments; no GitHub Actions workflow or repository deployment secret is needed.
+- Every push to `main` runs the tests and Vite+ build in Cloudflare, then publishes the site. Other branches receive preview deployments.
+- Node.js is pinned in `.node-version`; the Pages build environment uses the same version.
 
 ## По-русски
 
